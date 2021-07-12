@@ -1,0 +1,28 @@
+input {
+	text-align: justify;
+}
+button {
+	margin-top: 1em;
+	text-align: center;
+	
+}
+div {
+	text-align: center;
+}
+
+.logo {
+	align-self: center;
+	margin-top: 2em;
+}
+
+.search {
+	background-color: transparent;
+	
+	display: flex;
+	flex: 100%;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	width: 400px;
+	margin: auto;
+}
