@@ -1,18 +1,34 @@
 <!DOCTYPE html>
 <html>
-<title>Basic Rock Paper Scissors webpage game</title>
-<link rel="stylesheet" type="text/css" href="style.css">
+<head>
+	<meta charset="utf-8">
+	<title>Basic Rock Paper Scissors webpage game</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
 <body>
-	<header> class="header">
+	<header class="header">
 		<h1 class="title"> Rock Paper Scissors</h1>
 	</header>
-	<div class ="scoreBoard">
-		<h2 class = "scoreInfo" id="scoreHeader">Score</h2>
-		<div class = "scoreContainer"></div>
-		
+	<main>
+		<p class ="round" id="counter">Round</p>
+		<div class ="scoreBoard">
+			<h2 class = "scoreInfo" id="scoreHeader">Score</h2>
+			<div class = "scoreContainer">
+				<p id ="pScore">Player: 0</p>
+			</div>
+			<div class = "scoreContainer">
+				<p id = "cScore">Computer: 0</p>
+			</div>
+			<h2 id="pMove">Players Move: </h2>
 
+		</div>
 
-	<script type="text/javascript"> src="rock_paper_scissors.js</script>
-
-	</main>
-	
+		<div class = "moveList">
+			<button id = "buttonRock" value="rock">Rock</button>
+			<button id = "buttonPaper" value="paper">Paper</button>
+			<button id = "buttonScissors" value="scissors">Scissors</button>
+		</div>
+		<div id ="displayWinner" id="">Winner:</div>
+		<script type="text/javascript" src="rock_paper_scissors.js"></script>
+</main>
+</body>
