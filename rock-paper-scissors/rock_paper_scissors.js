@@ -84,17 +84,42 @@ function reset(){
 
 // computer will play a move based on random selection from the 3 moves available (rock,paper,scissors)
 function computerPlay(){
-	let computerMove = Math.floor((Math.random() * (moveArray.length)));
+	let shuffled = shuffleArray(moveArray);
+	//let computerMove = Math.floor((Math.random() * (shuffled.length)));
 	//console.log(computerMove)
-	switch (computerMove){
+	//switch (computerMove){
+	//console.log("Shuffled: " + shuffled[0]);
+	switch (shuffled[0]){
+		case 'rock':
+			return 'rock';
+
+		case 'paper':
+			return 'paper';
+
+		case 'scissors':
+			return 'scissors'
+		/*
 		case 0:
 			return "rock";
 		case 1:
 			return "paper";
 		case 2:
 			return "scissors";
+			*/
 	}
 }
+
+function shuffleArray(x){
+	for (let i = x.length -1; i>0; i--){
+		let randomizer = Math.floor(Math.random() * (i+1));
+		let temp = x[i];
+		x[i] = x[randomizer];
+		x[randomizer] = temp;
+	}
+	
+	return x;
+}
+
 function displayResult(){
 	if (playerScore > computerScore){
 		result.textContent="Winner: Player"
